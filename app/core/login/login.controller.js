@@ -1,33 +1,32 @@
 (function () {
     'use strict';
 
-    angular.module('app.login', [])
+    angular.module('app.login', ['app.service'])
         .controller('LoginController', LoginController);
 
 
-    function LoginController($scope,$state) {
+    function LoginController($scope,$state,AuthService) {
         var vm = $scope;
-        vm.username = 'ali@bcg.com'
-        vm.password = 'alialiali'
+        AuthService.progressLogin({
+            strategy: 'jwt',
+            accessToken: localStorage.getItem("jwt")
+        }).then(function(res) {
+            if(res) {
+                $state.go("home")
+            }
+        });
         vm.authenticate = function () {
-            feathersAuth.authenticate({
+            AuthService.progressLogin({
                 strategy: 'local',
                 email: vm.username,
                 password: vm.password
-            }).then(function(result){
-                console.log('Authenticated!', result);
-                return feathersAuth.passport.verifyJWT(result.accessToken);
-
-            }).then(function(payload) {
-                console.log('JWT Payload', payload);
-                return feathersAuth.service('users').get(payload.userId);
-            }).then(function(user) {
-                feathersAuth.set('user', user);
-                console.log('User', feathersAuth.get('user'));
-                $state.go("home")
-            }).catch(function(error){
-
-            });
+            }).then(function(res) {
+                if(res) {
+                    $state.go("home")
+                } else {
+                    alert("Login failed!")
+                }
+            })
         };
     };
 })();

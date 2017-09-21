@@ -23,6 +23,7 @@
             controller: 'HomeController'
         };
 
+
         $stateProvider.state(loginState);
         $stateProvider.state(homeState);
         $urlRouterProvider.otherwise('/');
