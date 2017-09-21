@@ -23,9 +23,17 @@
             controller: 'HomeController'
         };
 
+        var indexState = {
+            name: 'index',
+            url: '/',
+            templateUrl: 'core/index/index.view.html',
+            controller: 'IndexController'
+        };
+
 
         $stateProvider.state(loginState);
         $stateProvider.state(homeState);
+        $stateProvider.state(indexState);
         $urlRouterProvider.otherwise('/');
     }
 })();
