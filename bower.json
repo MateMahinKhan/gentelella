@@ -1,0 +1,18 @@
+{
+  "name": "ng-hsc",
+  "description": "no description so far",
+  "license": "MIT",
+  "homepage": "https://github.com/pamigomp/angularjs-template",
+  "ignore": [],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-animate": "^1.5.7",
+    "angular-mocks": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.6",
+    "jquery-ui": "^1.11.4",
+    "gentelella": "^1.4.0",
+    "ng-feathers": "^1.7.2"
+  },
+  "private": false
+}

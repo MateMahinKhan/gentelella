@@ -1,0 +1,26 @@
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.done-true {
+    text-decoration: line-through;
+    color: #ddd;
+}
+.form-control[disabled], .form-control[readonly], .fieldset[disabled], .form-control {
+    cursor: pointer;
+    background-color: white;
+}
+.l-wrapper {
+    width: 100%;
+    min-height: 100%;
+    background: #F7F7F7;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.hidden {
+    display: none;
+}
+.l-wrapper input.form-control {
+    cursor: auto;
+}
