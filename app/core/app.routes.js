@@ -30,10 +30,18 @@
             controller: 'IndexController'
         };
 
+        var tableState = {
+            name: 'table',
+            url: '/table',
+            templateUrl: 'core/table/table.view.html',
+            controller: 'TableController'
+        };
+
 
         $stateProvider.state(loginState);
         $stateProvider.state(homeState);
         $stateProvider.state(indexState);
+        $stateProvider.state(tableState);
         $urlRouterProvider.otherwise('/');
     }
 })();
