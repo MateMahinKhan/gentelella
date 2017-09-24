@@ -21,7 +21,8 @@
                 socket.emit('messages::find',{$limit: 10000}, function(error, data) {
                     console.log('Found all messages', data);
                     vm.table = data.data
-                    $scope.$apply()
+                    $scope.$apply();
+                    $(".c-table").dataTable()
                 });
             }
         });

@@ -1,15 +1,20 @@
 <div class="l-wrapper">
     <table class="c-table">
+        <thead>
         <tr>
             <th>#</th>
             <th>Text</th>
             <th>Created at</th>
         </tr>
+        </thead>
 
+        <tbody>
         <tr ng-repeat="_d in table track by $index">
             <td>{{$index}}</td>
             <td>{{_d.text}}</td>
             <td>{{_d.createdAt}}</td>
         </tr>
+        </tbody>
+
     </table>
 </div>
