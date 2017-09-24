@@ -5,6 +5,7 @@
         'ui.router',
         'app.login',
         'app.index',
+        'app.table',
         'app.home'
     ]);
 })();

@@ -24,3 +24,13 @@
 .l-wrapper input.form-control {
     cursor: auto;
 }
+.c-table {
+    width: 50%;
+    border-collapse: collapse;
+}
+.c-table td{
+    padding: 3px;
+}
+.c-table td, .c-table th{
+    border: 1px solid #ccc;
+}
