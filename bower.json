@@ -12,7 +12,8 @@
     "bootstrap": "^3.3.6",
     "jquery-ui": "^1.11.4",
     "gentelella": "^1.4.0",
-    "ng-feathers": "^1.7.2"
+    "ng-feathers": "^1.7.2",
+    "bootstrap-table": "~1.11.1"
   },
   "private": false
 }

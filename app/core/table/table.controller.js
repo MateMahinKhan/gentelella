@@ -22,7 +22,34 @@
                     console.log('Found all messages', data);
                     vm.table = data.data
                     $scope.$apply();
-                    $(".c-table").dataTable()
+                    $('.c-table').bootstrapTable({
+
+                        search:true,
+                        sidePagination: 'client',
+                        pageSize: 10,
+                        pagination: true,
+                        showToggle: true,
+                        showRefresh: true,
+                        showColumns: true,
+                        columns: [{
+                            title: 'ID',
+                            sortable: true,
+                            field: '_id',
+                            sortName: '_id',
+                        }, {
+                            title: 'Text',
+                            sortable: true,
+                            field: 'text',
+                            sortName: 'text',
+                        }, {
+                            title: 'Created at',
+                            sortable: true,
+                            field: 'createdAt',
+                            sortName: 'createdAt'
+                        }],
+                        data: vm.table
+                    });
+
                 });
             }
         });
